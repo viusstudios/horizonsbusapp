@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        
+        <title>Welcome to Horizons</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css"/> <!--Main Styles-->
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> <!--Oxygen Font (3 styles)-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"><!--Roboto (4 styles) Font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Sets viewport scale-->
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> <!--JQuery 3.2.1-->
+        <script src="js/app.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
+    
+    </head>
+    
+    <body>
+        
+        <main class="container type3">
+            
+            <div class="timewrapper">
+            
+                <div class="timecontainer departure">
+
+                    <section class="time timeinfo">
+
+                        <time>YOU WILL<br />DEPART</time>
+
+                    </section>
+
+                    <section class="time timevalue">
+
+                        <time>10:45 <span id="time">AM</span></time>
+
+                    </section>
+
+                </div>
+
+                <div class="timecontainer arrival">
+
+                    <section class="time timeinfo">
+
+                        <time>YOU WILL<br />ARRIVE</time>
+
+                    </section>
+
+                    <section class="time timevalue">
+
+                        <time>11:45 <span id="time">AM</span></time>
+
+                    </section>
+
+                </div>
+                
+            </div>
+            
+            <div class="google-maps"> <!--THIS IS DRAFT ONLY-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7098.94326104394!2d78.0430654485247!3d27.172909818538997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1385710909804" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+            </div>
+            
+            <br />
+            
+            <button type="button" value="saveroute" id="saveroute" class="button buttonB">SAVE ROUTE</button> <!--TODO: Trigger button to open dialogue to save a route-->
+            <button type="button" value="scheduleroute" id="scheduleroute" class="button buttonB" onclick="return view_route_details()">VIEW DETAILS</button>
+            <button type="button" value="backtofindroute" id="backtofindroute" class="button buttonB" onclick="return backtofindroute_onclick()">GO BACK</button>
+            
+            <!--TODO: Save form progress, so when back button is hit, the user's inputs are still there--> 
+            
+        </main>
+        
+        <div class="overlay routedetails" id="routedetails">
+            
+            <section id="routeinfo">
+                
+                <h2>Route</h2>
+            
+                <p><strong>Route Duration:</strong> <span id="routeduration">1:00</span></p>
+                <p><strong>Number of Route Stops:</strong> <span id="numberofroutestops">4</span></p>
+
+                <ul>
+                    <li>Walk <span id="origin_walkdistance">300m</span> to the nearest bus station, which is <span id="origin_streetname">Main Street Station (Square)</span></li>
+                    <li>Board the bus at <span id="origin_bustime">4:00 PM</span> and travel to <span id="destination1_bustime">Ferguson St.</span></li>
+                </ul>
+                
+            </section>
+            
+            <button type="button" value="exitdetails" id="exitdetails" class="button buttonB" onclick="return exit_route_details()">BACK</button>
+            
+        </div>
+        
+        <script>
+            
+            function backtofindroute_onclick() {
+                window.location.href = "newroute.html";
+            }
+            
+            function view_route_details() {
+                document.getElementById("routedetails").style.display = "flex";
+            }
+        
+            function exit_route_details() {
+                document.getElementById("routedetails").style.display = "none";
+            }
+        
+        </script>
+    
+    </body>
+
+</html>

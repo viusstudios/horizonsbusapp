@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        
+        <title>Welcome to Horizons</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css"/> <!--Main Styles-->
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> <!--Oxygen Font (3 styles)-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"><!--Roboto (4 styles) Font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Sets viewport scale-->
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> <!--JQuery 3.2.1-->
+        <script src="js/app.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
+    
+    </head>
+    
+    <body>
+        
+        <main class="container type0">
+            
+            
+            
+            <form action="">
+
+                <p class="label">ORIGIN</p><br />
+                
+                <input type="text" name="origin" id="origin" list="streetname">
+                <datalist id="streetname"><!--NOTE: Dropdown does not work on iOS - likely to work once Google Maps API autocomplete is implemented-->
+                    <option value="Palmerston North International Airport">
+                    <option value="The Stomach Palmerston North">
+                    <option value="Sai's House">
+                    <option value="Note that these are placeholders only">
+                </datalist>
+                
+                <br />
+                <p class="label">DESTINATION</p><br />
+                <input type="text" name="origin" id="origin" list="streetname">
+                <datalist id="streetname">
+                    <option value="Palmerston North International Airport">
+                    <option value="The Stomach Palmerston North">
+                    <option value="Sai's House">
+                    <option value="Note that these are placeholders only">
+                </datalist><br />
+                <p class="label">TIME OF DEPARTURE</p><br />
+                <select id="departuretime" name="departuretime" class="menufield">
+                    <option value="4:40 PM">4:40 PM</option>
+                    <option value="5:00 PM">5:00 PM</option>
+                    <option value="6:20 PM">6:20 PM</option>
+                </select>
+
+            </form>
+        
+            <div class="buttoncontainer">
+
+                <button type="button" value="findroute" id="findroute_desktop" class="button buttonA" onclick="return findroute_load_onclick()">FIND A BUS</button>
+                <button type="button" value="findroute" id="findroute_mobile" class="button buttonA" onclick="return findroute_link_onclick()">FIND A BUS</button>
+                <button type="button" value="backtomenu" id="backtomenu" class="button buttonA" onclick="return backtomenu_onclick()">GO BACK</button>
+                    
+            </div>
+            
+            <div class="loadside" id="loadside">
+            
+                <iframe src="viewroute-desktop.html">
+                    
+                </iframe>
+            
+            </div>
+            
+        </main>
+        
+         <!--TEMPORARY PLACEHOLDER JAVASCRIPT FUNCTION-->
+        <script type="text/javascript">
+        
+            function findroute_load_onclick() {
+                document.getElementById("loadside").style.display = "block";
+            }
+            
+            function findroute_link_onclick() {
+                window.location.href = "viewroute.html";
+            }
+            
+            function backtomenu_onclick() {
+                window.location.href = "index.html";
+            }
+            
+            // javascript will process form inputs
+        
+        </script>
+    
+    </body>
+
+</html>

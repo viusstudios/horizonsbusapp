@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <meta charset="utf-8">
+        
+        <title>Welcome to Horizons</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css"/> <!--Main Styles-->
+        <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> <!--Oxygen Font (3 styles)-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"><!--Roboto (4 styles) Font-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Sets viewport scale-->
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> <!--JQuery 3.2.1-->
+        <script src="js/app.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
+    
+    </head>
+    
+    <body>
+        
+        <main class="container type1">
+        
+            <header>
+
+                <!--Blank Header Space-->
+
+            </header>
+
+            <!--NEW ROUTE BUTTON-->
+            
+            <a href="newroute.html">
+                <div class="menu1 newroute">
+                    <section id="content1">
+                        <p>NEW ROUTE</p>
+                        <img src="assets/icon_newroute.png" id="icon"/>
+                    </section>
+
+                </div>
+            </a>
+            
+            <!--SAVED ROUTES BUTTON-->
+
+            <a href="savedroutes.html">
+                <div class="menu1 savedroute">
+
+                    <section id="content1">
+                        <p>SAVED ROUTES</p>
+                        <img src="assets/icon_savedroutes.png" id="icon"/>
+                    </section>
+
+                </div>
+            </a>
+            
+            <!--VIEW SCHEDULE BUTTON-->
+
+            <div class="menu2container">
+
+                <a href="schedule.html">
+                    <div class="menu2 viewschedule">
+
+                        <section id="content2">
+                            <p>VIEW SCHEDULES</p>
+                            <img src="assets/icon_schedule.png" id="icon"/>
+                        </section>
+
+                    </div>
+                </a>
+                
+                <!--APP INFORMATION BUTTON-->
+
+                <a href="#">
+                    <div class="menu2 viewmap">
+
+                        <section id="content2" onclick="return view_appinfo()">
+                            <p>ABOUT APP</p>
+                            <img src="assets/icon_map.png" id="icon"/>
+                        </section>
+
+                    </div>
+                </a>
+
+            </div>
+            
+        </main>
+        
+        <!--APP OVERLAY - TRIGGERED ON BUTTON CLICKS-->
+        
+        <section class="overlay appinfo" id="appinfo">
+        
+            <!--App Info-->
+            
+            <p><strong>Current Version: 0.4</strong><br />(THIS IS AN INTERFACE ONLY - NO ACTUAL APP FUNCTIONALITY HAS BEEN IMPLEMENTED AT THIS TIME)</p>
+            <p>Changelog from previous version:
+                <ul>
+                    <li>Placeholder 1</li>
+                    <li>Placeholder 2</li>
+                    <li>Placeholder 3</li>
+                </ul>
+            </p>
+            <p>Copyright &copy; Horizons 2017<br />Designed and Developed by Sai Natarajan</p>
+            
+            <div style="margin-bottom: 1%;">
+                <button type="button" value="exit" id="exitappinfo" class="button buttonB">RATE ME</button>
+
+                <button type="button" value="exit" id="exitappinfo" class="button buttonB" onclick="return exit_appinfo()">EXIT</button>
+            </div>
+        
+        </section>
+        
+        <script>
+            
+            // TEMPORARY JAVASCRIPT FOR BUTTONS
+        
+            function view_appinfo() {
+                document.getElementById("appinfo").style.display = "flex";
+            }
+            
+            function exit_appinfo() {
+                document.getElementById("appinfo").style.display = "none";
+            }
+            
+        </script>
+    
+    </body>
+    
+    <!--Can I have excellence now pls?-->
+
+</html>

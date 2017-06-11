@@ -1,0 +1,445 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(22,187,129,1);
+    background: -moz-linear-gradient(45deg, rgba(22,187,129,1) 0%, rgba(44,122,96,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(22,187,129,1)), color-stop(100%, rgba(44,122,96,1)));
+    background: -webkit-linear-gradient(45deg, rgba(22,187,129,1) 0%, rgba(44,122,96,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(22,187,129,1) 0%, rgba(44,122,96,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(22,187,129,1) 0%, rgba(44,122,96,1) 100%);
+    background: linear-gradient(45deg, rgba(22,187,129,1) 0%, rgba(44,122,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#16bb81', endColorstr='#2c7a60', GradientType=1 );
+    font-family: 'Roboto', sans-serif;
+}
+
+.type1 {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    height: 22%;
+}
+
+.menu1 {
+    font-weight: 100;
+    font-size: 18pt;
+    color: #ffffff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 15%;
+    text-align: left;
+    border-bottom: solid 1px #ffffff;
+    display: flex;
+}
+
+.menu1 p {
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#content1 {
+    /* Button1 Text */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.menu2 {
+    font-weight: 100;
+    text-align: left;
+    border-bottom: solid 1px #ffffff;
+    vertical-align: middle;
+}
+
+#content2 {
+    /* Button2 Text */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#icon {
+    /* Button Icon */
+    width: 50px;
+}
+
+/****************************************
+ *    LINK STYLING    
+ ****************************************/
+
+a:link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/****************************************
+ *    MOBILE SITE    
+ ****************************************/
+
+@media screen and (max-width: 480px) {
+    
+    /* Header Space */
+    
+    .header {
+        height: 22%;
+    }
+    
+    /****************************************
+     *    HOMEPAGE BUTTON STYLING    
+     ****************************************/
+    
+    .menu1 {
+        font-weight: 100;
+        font-size: 18pt;
+        color: #ffffff;
+        width: 80%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 5%;
+        height: 15%;
+        text-align: left;
+        border-bottom: solid 1px #ffffff;
+        display: flex;
+    }
+    
+    .menu2 {
+        font-weight: 100;
+        width: 86%;
+        padding: 2%;
+        height: 8%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        border-bottom: solid 1px #ffffff;
+        vertical-align: middle;
+        display: flex;
+    }
+    
+    .menu2 p {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+    }
+    
+    /* For Line At Top */
+    
+    .newroute {
+        border-top: solid 1px #ffffff;
+    }
+    
+    #content1 {
+        /* Button1 Text */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #content2 {
+        /* Button2 Text */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #icon {
+        /* Button Icon */
+        width: 16%;
+    }
+    
+    /****************************************
+     *    OVERALL CONTAINER STYLING    
+     ****************************************/
+    
+    .container {
+        /* Default Container Code (variations do occur)*/
+        margin-left: auto;
+        margin-right: auto;
+        width: 98%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    
+    .container form {
+        /* New Route Form Input Base Styling */
+        width: 90%;
+        margin: 5%;
+        text-align: center;
+    }
+    
+    .container form p {
+        /* New Route Form Input Label Styling */
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        color: #ffffff;
+        font-weight: 200;
+        margin-bottom: -2%;
+        line-height: 0;
+        width: 100%;
+    }
+    
+    .container form input[type=text], select {
+        /* New Route Form Text Input Styling */
+        opacity: 0.7;
+        width: 90%;
+        padding: 4%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+        text-align: center;
+        font-size: 18pt;
+        color: rgb(22,187,129);
+        background: rgba(255,255,255,1);
+        background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(158,156,158,1)));
+        background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#9e9c9e', GradientType=1 );
+        border: none;
+        -webkit-box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.57);
+        -moz-box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.57);
+        box-shadow: inset 0px 0px 8px 0px rgba(0,0,0,0.57);
+        transition: 0.2s;
+    }
+    
+    .container form select {
+        /* New Route Form Time Menu Styling */
+        -webkit-appearance: none;
+        border-radius: 0;
+        width: 98%;
+    }
+    
+    .container form input[type=text]:focus {
+        /* New Route Form Time Menu Styling When Focused, hence the :focus attribute */
+        opacity: 1;
+        outline: none;
+    
+    }
+    
+    /****************************************
+     *    CONTAINER STYLING VARIANTS
+     ****************************************/
+    
+    .type1 {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    .type2 {
+        height: 94%;
+        padding-top: 10%;
+        width: 100%;
+        display: block;
+    }
+    
+    .type3 {
+        width: 94%;
+        height: 90%;
+        padding: 3%;
+        padding-top: 8%;
+        display: block;
+    }
+    
+    .buttoncontainer {
+        margin-top: 8%;
+    }
+    
+    .button {
+        /* New Route Form Button Styling */
+        display: flex;
+        width: 90%;
+        margin: 2.5%;
+        margin-top: 0.5%;
+        border: 0;
+        padding: 3%;
+        padding-left: 4%;
+        opacity: 0.6;
+        color: rgba(44,122,96,1);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+        font-size: 14pt;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,1)), color-stop(100%, rgba(158,156,158,1)));
+        background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: -o-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: -ms-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(158,156,158,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#9e9c9e', GradientType=1 );
+    }
+    
+    .button:hover {
+        /* New Route Form Button Styling */
+        cursor: pointer;
+    }
+    
+    .buttonA {
+        /* New Route Form Button Styling */
+        padding: 4%;
+        font-size: 20pt;
+        margin-bottom: 8%;
+    }
+    
+    .buttonC {
+        /* New Route Form Button Styling */
+        width: 83%;
+    }
+    
+    /****************************************
+     *    SAVED ROUTES PAGE STYLING    
+     ****************************************/
+    
+    .container h1, .container h2 {
+        /* Title Styling */
+        width: 100%;
+        font-weight: 400;
+        top: 2%;
+        position: absolute;
+        text-align: center;
+        color: #ffffff;
+    }
+    
+    .savedroutes {
+        /* List of saved routes */
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 5%;
+        list-style-type: none;
+    }
+    
+    .savedroutes li {
+        padding: 3%;
+        width: 94%;
+        border-bottom: 1px #ffffff solid;
+        color: #ffffff;
+        font-weight: 200;
+        text-align: left;
+        transition: 0.2s;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #name {
+        /* Saved Routes Name */
+        margin: 0;
+        width: 85%;
+        transition: 0.2s;
+    }
+    
+    #name:hover {
+        cursor: pointer;
+    }
+    
+    #name:active {
+        cursor: pointer;
+    }
+    
+    #removebutton {
+        /* Remove Route Button */
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+        color: #ffffff;
+        font-weight: 200;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        border: #ffffff 1px solid;
+        transition: 0.2s;
+    }
+    
+    #removebutton:focus {
+        outline: none;
+    }
+    
+    #removebutton:hover {
+        border: #ffffff 3px solid;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    
+    #removebutton:active {
+        border: #ffffff 3px solid;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    
+    /****************************************
+     *    VIEW ROUTE PAGE STYLING    
+     ****************************************/
+    
+    .timecontainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .time {
+        padding: 2%;
+        color: #ffffff;
+        font-weight: 200;
+    }
+    
+    .time p {
+        margin: 0;
+    }
+    
+    .timeinfo {
+        width: 50%;
+        text-align: right;
+        font-size: 13pt;
+    }
+    
+    .timevalue {
+        width: 100%;
+        font-size: 40pt;
+    }
+    
+    #time {
+        font-size: 14pt;
+    }
+    
+    .google-maps {
+        margin-top: 4%;
+        width: 93%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50%;
+    }
+}

@@ -98,7 +98,7 @@ var highburyStops =
     "OT Reserve Pembroke St",
     "Havelock Ave",
     "Botanical Rd",
-    "Feasterton St",
+    "Featherston St",
     "Arrive MST"
 ];
 
@@ -368,6 +368,12 @@ var roslynTimesSun = [11.40,11.46,11.48,11.50,11.55,12.00,12.05,12.09,12.15];
 
 // RANGIORA ROUTE
 
+var rangioraStops = [];
+var rangioraTimesMonFri = [];
+var rangioraTimesFri = [];
+var rangioraTimesSat = [];
+var rangioraTimesSun = [];
+
 // TODO: Rangiora Route
 
 // BRIGHTWATER ROUTE
@@ -536,4 +542,19 @@ var fernleaBus = new Bus('Fernlea',fernleaStops,fernleaTimesMonFri,fernleaTimesF
 
 var heightsBus = new Bus('Heights',heightsStops,heightsTimesMonFri,heightsTimesFriOnly,heightsSat/*TODO: Check if Heights Bus has Sunday timetable*/);
 
-console.log(heightsBus);
+// DOMS
+
+var routeSelectionDOM = document.getElementById("routelist");
+var originDOM = document.getElementById("originList");
+var destinationDOM = document.getElementById("destinationList");
+
+function getRoute(val) {
+
+//    for (eval(val.toLowerCase).stops.length)
+//    content = ''
+//    content += "<option>"+ stops[i] + </option>
+
+
+    alert(val);
+
+}

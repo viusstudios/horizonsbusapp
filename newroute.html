@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Sets viewport scale-->
         
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> <!--JQuery 3.2.1-->
-        <script src="js/app.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
+        <script src="js/bus-stops-and-times-final.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
     
     </head>
     
@@ -26,30 +26,33 @@
             
             <form action="">
 
-                <p class="label">ORIGIN</p><br />
+                <p class="label">CHOOSE ROUTE</p><br />
                 
-                <input type="text" name="origin" id="origin" list="streetname">
-                <datalist id="streetname"><!--NOTE: Dropdown does not work on iOS - likely to work once Google Maps API autocomplete is implemented-->
-                    <option value="Palmerston North International Airport">
-                    <option value="The Stomach Palmerston North">
-                    <option value="Sai's House">
-                    <option value="Note that these are placeholders only">
-                </datalist>
+                <select id="routelist" onchange="getRoute(this.value)">
+                    <option value="Awapuni">Awapuni</option>
+                    <option value="Rugby">Rugby</option>
+                    <option value="Highbury">Highbury</option>
+                    <option value="Takaro">Takaro</option>
+                    <option value="Cloverlea">Cloverlea</option>
+                    <option value="Milson">Milson</option>
+                    <option value="Rhodes">Rhodes</option>
+                    <option value="Roslyn">Roslyn</option>
+                    <option value="Rangiora">Rangiora</option>
+                    <option value="Brightwater">Brightwater</option>
+                    <option value="Fernlea">Fernlea</option>
+                    <option value="Heights">Heights</option>
+                </select>
                 
                 <br />
+
+                <p class="label">ORIGIN</p><br />
+                <select id="originList">
+
+                </select>
+
                 <p class="label">DESTINATION</p><br />
-                <input type="text" name="origin" id="origin" list="streetname">
-                <datalist id="streetname">
-                    <option value="Palmerston North International Airport">
-                    <option value="The Stomach Palmerston North">
-                    <option value="Sai's House">
-                    <option value="Note that these are placeholders only">
-                </datalist><br />
-                <p class="label">TIME OF DEPARTURE</p><br />
-                <select id="departuretime" name="departuretime" class="menufield">
-                    <option value="4:40 PM">4:40 PM</option>
-                    <option value="5:00 PM">5:00 PM</option>
-                    <option value="6:20 PM">6:20 PM</option>
+                <select id="destinationList">
+
                 </select>
 
             </form>

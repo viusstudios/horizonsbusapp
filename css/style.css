@@ -452,6 +452,10 @@ header {
     height: 40%;
 }
 
+#map {
+    height: 100%;
+}
+
 .timewrapper {
     width: 80%;
     display: flex;

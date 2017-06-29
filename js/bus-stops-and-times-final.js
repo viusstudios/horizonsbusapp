@@ -536,7 +536,7 @@ var roslynBus = new Bus('Roslyn',roslynStops,roslynTimesMonFri,roslynTimesFriOnl
 
 var rangioraBus = /* TODO: Include Rangiora Bus Information */null;
 
-var brightwaterBus = new Bus('Brightwater',brightwaterTimesMonFri,brightwaterTimesFri,brightwaterTimesSat,brightwaterTimesSun);
+var brightwaterBus = new Bus('Brightwater',brightwaterStops,brightwaterTimesMonFri,brightwaterTimesFri,brightwaterTimesSat,brightwaterTimesSun);
 
 var fernleaBus = new Bus('Fernlea',fernleaStops,fernleaTimesMonFri,fernleaTimesFriOnly,fernleaTimesSat/*TODO: Check if Fernlea Bus has Sunday timetable*/);
 
@@ -554,7 +554,15 @@ function getRoute(val) {
 //    content = ''
 //    content += "<option>"+ stops[i] + </option>
 
+    var userValue = val.toLowerCase() + "Bus";
 
-    alert(val);
+    var i = 0;
+    var content = '';
 
+    while (i < eval(userValue).busStops.length) {
+        content += "<option>" + eval(userValue).busStops[i] + "</option>";
+        i++;
+    }
+
+    document.getElementById("originList").innerHTML = content;
 }

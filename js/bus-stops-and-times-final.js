@@ -273,7 +273,7 @@ var milsonTimesSun = [
 // RHODES ROUTE
 
 var rhodesStops = ["Depart MST",
-"Rangitiket St",
+"Rangitikei St",
 "Tremaine Ave",
 "Kelvin Grove",
 "Rhodes Dr",
@@ -574,5 +574,10 @@ function getRoute(val) {
     originList.remove(8);
     destinationList.innerHTML = destinations;
     destinationList.remove(0);
+}
 
+function checkStops(val) {
+    if (originList.value === destinationList.value) {
+        alert("You cannot depart and arrive at the same spot.");
+    }
 }

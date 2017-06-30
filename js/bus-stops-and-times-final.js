@@ -557,6 +557,10 @@ function getRoute(val) {
     var userValue = val.toLowerCase() + "Bus";
 
     var i = 0;
+
+    var originList = document.getElementById("originList");
+    var destinationList = document.getElementById("destinationList");
+
     var origins = '';
     var destinations = '';
 
@@ -566,6 +570,9 @@ function getRoute(val) {
         i++;
     }
 
-    document.getElementById("originList").innerHTML = origins;
-    document.getElementById("destinationList").innerHTML = destinations;
+    originList.innerHTML = origins;
+    originList.remove(8);
+    destinationList.innerHTML = destinations;
+    destinationList.remove(0);
+
 }

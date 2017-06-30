@@ -557,12 +557,15 @@ function getRoute(val) {
     var userValue = val.toLowerCase() + "Bus";
 
     var i = 0;
-    var content = '';
+    var origins = '';
+    var destinations = '';
 
     while (i < eval(userValue).busStops.length) {
-        content += "<option>" + eval(userValue).busStops[i] + "</option>";
+        origins += "<option>" + eval(userValue).busStops[i] + "</option>";
+        destinations += "<option>" + eval(userValue).busStops[i] + "</option>";
         i++;
     }
 
-    document.getElementById("originList").innerHTML = content;
+    document.getElementById("originList").innerHTML = origins;
+    document.getElementById("destinationList").innerHTML = destinations;
 }

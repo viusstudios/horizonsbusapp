@@ -504,7 +504,11 @@ header {
     line-height: 0;
 }
 
-#time {
+#time1 {
+    font-size: 14pt;
+}
+
+#time2 {
     font-size: 14pt;
 }
 

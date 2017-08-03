@@ -14,16 +14,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Sets viewport scale-->
         
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> <!--JQuery 3.2.1-->
-        <script src="js/bus-stops-and-times-final.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
     
     </head>
     
     <body>
         
         <main class="container type0">
-            
-            
-            
+
             <form action="">
 
                 <p class="label">CHOOSE ROUTE</p><br />
@@ -47,12 +44,12 @@
                 <br />
 
                 <p class="label">ORIGIN</p><br />
-                <select id="originList" onchange="checkStops(this.value)">
+                <select id="originList">
 
                 </select>
 
                 <p class="label">DESTINATION</p><br />
-                <select id="destinationList" onchange="checkStops(this.value)">
+                <select id="destinationList">
 
                 </select>
 
@@ -60,8 +57,8 @@
         
             <div class="buttoncontainer">
 
-                <button type="button" value="findroute" id="findroute_desktop" class="button buttonA" onclick="return findroute_load_onclick()">FIND A BUS</button>
-                <button type="button" value="findroute" id="findroute_mobile" class="button buttonA" onclick="return findroute_link_onclick()">FIND A BUS</button>
+                <!-- <button type="button" value="findroute" id="findroute_desktop" class="button buttonA" onclick="return findroute_load_onclick()">FIND A BUS</button> -->
+                <button type="button" value="findroute" id="findroute_mobile" class="button buttonA" onclick="loadTimes(routeSelectionDOM.value)">FIND A BUS</button>
                 <button type="button" value="backtomenu" id="backtomenu" class="button buttonA" onclick="return backtomenu_onclick()">GO BACK</button>
                     
             </div>
@@ -77,6 +74,7 @@
         </main>
         
          <!--TEMPORARY PLACEHOLDER JAVASCRIPT FUNCTION-->
+<!--
         <script type="text/javascript">
         
             function findroute_load_onclick() {
@@ -94,7 +92,51 @@
             // javascript will process form inputs
         
         </script>
+-->
     
     </body>
+
+    <div class="overlay" id="timeoverlay">
+
+        <div class="timewrapper">
+
+            <div class="timecontainer departure">
+
+                <section class="time timeinfo">
+
+                    <p>NEXT<br />BUS</p>
+
+                </section>
+
+                <section class="time timevalue">
+
+                    <time id="nextbusvalue"> <span id="time1"> </span></time>
+
+                </section>
+
+            </div>
+
+            <div class="timecontainer arrival">
+
+                <section class="time timeinfo">
+
+                    <p>YOU WILL<br />ARRIVE</p>
+
+                </section>
+
+                <section class="time timevalue">
+
+                    <time id="arrivaltimevalue">11:45 <span id="time2"> </span></time>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/bus-stops-and-times-final.js"></script>
+    <script src="js/app.js"></script>
 
 </html>

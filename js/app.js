@@ -65,7 +65,7 @@ function loadTimes(val) {
         date = new Date();
         hours = date.getHours();
         minutes = date.getMinutes();
-        dateConverted = 12.00; // converts date into hh.mm form, to compare with integer values in array
+        dateConverted = hours + "." + minutes; // converts date into hh.mm form, to compare with integer values in array
 
         day = date.getDay();
 

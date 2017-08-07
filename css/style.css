@@ -681,6 +681,22 @@ header {
         width: 80%;
     }
     
+    .timelist {
+        display: flex;
+        text-align: center;
+        height: 85%;
+    }
+
+    .timelist ul {
+        list-style-type: none;
+        padding: 1%;
+        width: 48%;
+    }
+
+    .timelist h4 {
+        height: 15%;
+    }
+
     /****************************************
      *    SAVED ROUTES PAGE STYLING (mobile)   
      ****************************************/

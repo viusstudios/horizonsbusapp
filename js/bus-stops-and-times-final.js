@@ -498,3 +498,46 @@ var heightsSat = [
     [15.00, 15.03, 15.06, 15.07, 15.15, 15.20, 15.22, 15.25, 15.35],
     [16.20]
 ];
+
+/* ***********************
+ * BUS OBJECTS
+ * ***********************/
+
+// BUS CONSTRUCTOR
+
+class Bus {
+    constructor(busName,busStops,busTimesMonFri,busTimesFriOnly,busTimesSat,busTimesSun) {
+        this.busName = busName;
+        this.busStops = busStops;
+        this.busTimesMonFri = busTimesMonFri;
+        this.busTimesFriOnly = busTimesFriOnly;
+        this.busTimesSat = busTimesSat;
+        this.busTimesSun = busTimesSun;
+    }
+}
+
+// BUS OBJECTS
+
+var awapuniBus = new Bus('Awapuni',awapuniStops,awapuniTimesMonFri,awapuniTimesFriOnly,awapuniTimesSat,awapuniTimesSun);
+
+var rugbyBus = new Bus('Rugby',rugbyStops,rugbyTimesMonFri,rugbyTimesSat,rugbyTimesSun);
+
+var highburyBus = new Bus('Highbury',highburyStops,highburyTimesMonFri,highburyTimesFriOnly,/* highburyTimesSat,highburyTimesSun (// TODO: Add these upon completion of Highbury weekends) */);
+
+var takaroBus = new Bus('Takaro',takaroStops,takaroTimesMonFri,takaroTimesFriOnly,takaroTimesSat,takaroTimesSun);
+
+var cloverleaBus = new Bus('Cloverlea',cloverleaStops,cloverleaTimesMonFri,cloverleaTimesFriOnly,cloverleaTimesSat,cloverleaTimesSun);
+
+var milsonBus = new Bus('Milson',milsonStops,milsonTimesMonFri,milsonTimesFriOnly,milsonTimesSat,milsonTimesSun);
+
+var rhodesBus = new Bus('Rhodes',rhodesStops,rhodesTimesMonFri/* //TODO: Include rhodesTimesFriOnly*/,rhodesTimesSat,rhodesTimesSun);
+
+var roslynBus = new Bus('Roslyn',roslynStops,roslynTimesMonFri,roslynTimesFriOnly,roslynTimesSat,roslynTimesSun);
+
+var rangioraBus = /* TODO: Include Rangiora Bus Information */null;
+
+var brightwaterBus = new Bus('Brightwater',brightwaterStops,brightwaterTimesMonFri,brightwaterTimesFri,brightwaterTimesSat,brightwaterTimesSun);
+
+var fernleaBus = new Bus('Fernlea',fernleaStops,fernleaTimesMonFri,fernleaTimesFriOnly,fernleaTimesSat/*TODO: Check if Fernlea Bus has Sunday timetable*/);
+
+var heightsBus = new Bus('Heights',heightsStops,heightsTimesMonFri,heightsTimesFriOnly,heightsSat/*TODO: Check if Heights Bus has Sunday timetable*/);

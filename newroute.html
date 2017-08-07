@@ -132,7 +132,28 @@
 
             </div>
 
+            <button type="button" value="saveroute" id="saveroute" class="button buttonB" onclick="viewAllTimes()">VIEW ALL TIMES</button> <!--TODO: Trigger button to open dialogue to save a route-->
+            <button type="button" value="backtofindroute" id="backtofindroute" class="button buttonB" onclick="exitOverlay()">EXIT</button>
+
         </div>
+
+    </div>
+
+    <div class="overlay" id="alltimes">
+
+        <div class="timelist">
+
+            <ul id="timelist1">
+
+            </ul>
+
+            <ul id="timelist2">
+
+            </ul>
+
+        </div>
+
+        <button type="button" value="backtofindroute" id="backtofindroute" class="button buttonB" onclick="exitTimeList()">BACK</button>
 
     </div>
 

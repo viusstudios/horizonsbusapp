@@ -1,69 +1,3 @@
-/* ***********************
- * BUS OBJECTS
- * ***********************/
-
-// BUS CONSTRUCTOR
-
-class Bus {
-    constructor(busName,busStops,busTimesMonFri,busTimesFriOnly,busTimesSat,busTimesSun) {
-        this.busName = busName;
-        this.busStops = busStops;
-        this.busTimesMonFri = busTimesMonFri;
-        this.busTimesFriOnly = busTimesFriOnly;
-        this.busTimesSat = busTimesSat;
-        this.busTimesSun = busTimesSun;
-    }
-}
-
-// BUS OBJECTS
-
-var awapuniBus = new Bus('Awapuni',awapuniStops,awapuniTimesMonFri,awapuniTimesFriOnly,awapuniTimesSat,awapuniTimesSun);
-
-var rugbyBus = new Bus('Rugby',rugbyStops,rugbyTimesMonFri,rugbyTimesSat,rugbyTimesSun);
-
-var highburyBus = new Bus('Highbury',highburyStops,highburyTimesMonFri,highburyTimesFriOnly,/* highburyTimesSat,highburyTimesSun (// TODO: Add these upon completion of Highbury weekends) */);
-
-var takaroBus = new Bus('Takaro',takaroStops,takaroTimesMonFri,takaroTimesFriOnly,takaroTimesSat,takaroTimesSun);
-
-var cloverleaBus = new Bus('Cloverlea',cloverleaStops,cloverleaTimesMonFri,cloverleaTimesFriOnly,cloverleaTimesSat,cloverleaTimesSun);
-
-var milsonBus = new Bus('Milson',milsonStops,milsonTimesMonFri,milsonTimesFriOnly,milsonTimesSat,milsonTimesSun);
-
-var rhodesBus = new Bus('Rhodes',rhodesStops,rhodesTimesMonFri/* //TODO: Include rhodesTimesFriOnly*/,rhodesTimesSat,rhodesTimesSun);
-
-var roslynBus = new Bus('Roslyn',roslynStops,roslynTimesMonFri,roslynTimesFriOnly,roslynTimesSat,roslynTimesSun);
-
-var rangioraBus = /* TODO: Include Rangiora Bus Information */null;
-
-var brightwaterBus = new Bus('Brightwater',brightwaterStops,brightwaterTimesMonFri,brightwaterTimesFri,brightwaterTimesSat,brightwaterTimesSun);
-
-var fernleaBus = new Bus('Fernlea',fernleaStops,fernleaTimesMonFri,fernleaTimesFriOnly,fernleaTimesSat/*TODO: Check if Fernlea Bus has Sunday timetable*/);
-
-var heightsBus = new Bus('Heights',heightsStops,heightsTimesMonFri,heightsTimesFriOnly,heightsSat/*TODO: Check if Heights Bus has Sunday timetable*/);
-
-function initMap() {
-        // LOCATIONS
-        var freybergHS = {lat: -40.337483, lng: 175.6254343};
-        var theSquare = {lat: -40.356301, lng: 175.611292};
-
-        // MAP
-        var palmyNth = new google.maps.Map(document.getElementById('map'), {
-            center: freybergHS,
-            zoom: 15
-        });
-
-        var freybergHSMarker = new google.maps.Marker({
-            position: freybergHS,
-            map: palmyNth
-        });
-
-        var theSquareMarker = new google.maps.Marker({
-            position: theSquare,
-            map: palmyNth
-        })
-
-    }
-
 // DOMS
 
 var routeSelectionDOM = document.getElementById("routelist");
@@ -112,7 +46,9 @@ function checkStops(val) {
 }
 
 var originIndex = "";
+var originValue = "";
 var destinationIndex = "";
+var destinationValue = "";
 
 function loadTimes(val) {
 
@@ -122,14 +58,16 @@ function loadTimes(val) {
 
     else {
         originIndex = originDOM.selectedIndex;
+        originValue = originDOM.value;
         destinationIndex = destinationDOM.selectedIndex + 1; // add one, because one array element is spliced out due to invalidity (see lines 97 and 99)
+        destinationValue = destinationDOM.value;
 
         date = new Date();
         hours = date.getHours();
         minutes = date.getMinutes();
-        dateConverted = hours + "." + minutes; // converts date into hh.mm form, to compare with integer values in array
+        dateConverted = 12.00; // converts date into hh.mm form, to compare with integer values in array
 
-        day = 5;
+        day = date.getDay();
 
         selectedBus = eval(userValue).busTimesMonFri;
 
@@ -162,8 +100,6 @@ function loadTimes(val) {
                 break;
             }
 
-
-
             else if (dateConverted > selectedTime) {
                 console.log("Origin Time: " + selectedTime.toFixed(2));
                 console.log("Destination Time: " + destinationTime.toFixed(2)); // list times until next available bus in array
@@ -186,8 +122,33 @@ function loadTimes(val) {
 
                 break;
             }
-
         }
     }
+}
 
+function viewAllTimes() {
+
+    document.getElementById("timeoverlay").style.display = "none";
+    document.getElementById("alltimes").style.display = "block";
+
+    timeContentOrigin = "<h4 id='originHeading'>" + originValue + "</h4>";
+    timeContentDestination = "<h4 id='originHeading'>" + destinationValue + "</h4>";
+
+    for(var x = 0; x < selectedBus.length; x++) {
+        timeContentOrigin += '<li>' + selectedBus[x][originIndex].toFixed(2) + '</li>';
+        timeContentDestination += '<li>' + selectedBus[x][destinationIndex].toFixed(2) + '</li>';
+    }
+
+    document.getElementById("timelist1").innerHTML = timeContentOrigin;
+    document.getElementById("timelist2").innerHTML = timeContentDestination;
+
+}
+
+function exitOverlay() {
+    document.getElementById("timeoverlay").style.display = "none";
+}
+
+function exitTimeList() {
+    document.getElementById("alltimes").style.display = "none";
+    document.getElementById("timeoverlay").style.display = "block";
 }

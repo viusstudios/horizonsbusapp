@@ -3,29 +3,29 @@
 <html>
 
     <head>
-    
+
         <meta charset="utf-8">
-        
+
         <title>Welcome to Horizons</title>
-        
+
         <link rel="stylesheet" type="text/css" href="css/style.css"/> <!--Main Styles-->
         <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet"> <!--Oxygen Font (3 styles)-->
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700" rel="stylesheet"><!--Roboto (4 styles) Font-->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Sets viewport scale-->
-        
+
         <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> <!--JQuery 3.2.1-->
         <script src="js/app.js"></script> <!--App JavaScript. NOTE: CURRENTLY BLANK-->
-    
+
     </head>
-    
+
     <body>
-        
+
         <main class="container type4">
-        
+
             <div class="schedulewrapper awapuni">
-            
+
                 <table>
-                
+
                     <tr>
                         <col width="160px">
                         <th><strong>Depart MST</strong></th>
@@ -38,7 +38,7 @@
                         <th>Ferguson St</th>
                         <th><strong>Arrive MST</strong></th>
                     </tr>
-                    
+
                     <tr>
                         <td><time>7:00 AM</time></td>
                         <td><time>7:08 AM</time></td>
@@ -50,7 +50,7 @@
                         <td><time>7:25 AM</time></td>
                         <td><time>7:35 AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>7:40 AM</time></td>
                         <td><time>7:48 AM</time></td>
@@ -62,7 +62,7 @@
                         <td><time>8:05 AM</time></td>
                         <td><time>8:15 AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>8:20 AM</time></td>
                         <td><time>8:28 AM</time></td>
@@ -74,7 +74,7 @@
                         <td><time>8:45 AM</time></td>
                         <td><time>8:55 AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -86,7 +86,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -98,7 +98,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -110,7 +110,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -122,7 +122,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -134,7 +134,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -146,7 +146,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -158,7 +158,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -170,7 +170,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -182,7 +182,7 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                    
+
                     <tr>
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
@@ -194,28 +194,28 @@
                         <td><time>XX:XX AM</time></td>
                         <td><time>XX:XX AM</time></td>
                     </tr>
-                
+
                 </table>
-            
+
             </div>
-            
+
             <div style="width: 100%;">
-            
+
                 <button type="button" value="nextbuses" id="nextbuses" class="button buttonC" onclick="return nextbuses_onclick()">NEXT BUSES</button>
                 <button type="button" value="backtomenu" id="backtomenu" class="button buttonC" onclick="return backtomenu_onclick()">GO BACK</button>
-                
+
             </div>
-            
+
         </main>
-        
+
         <div class="overlay nextbuseslist" id="nextbuseslist">
-            
+
             <section id="businfo">
-                
+
                 <details>
-                    
+
                     <summary>Depart MST</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -231,13 +231,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>Park Rd (Lido)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -253,13 +253,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>College St (178)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -275,13 +275,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>Pitama Rd (35)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -297,13 +297,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>Maxwells Line (64)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -319,13 +319,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>College St (40)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -341,13 +341,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>Rugby St (94)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -363,13 +363,13 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
                 <details>
-                    
+
                     <summary>Ferguson St (129)</summary>
-                    
+
                     <div class="timecontainer businfo">
 
                             <section class="time timeinfo">
@@ -385,33 +385,33 @@
                         </section>
 
                     </div>
-                    
+
                 </details>
-                
+
             </section>
-            
+
             <button type="button" value="existnextbuses" id="exitnextbuses" class="button buttonB" onclick="return exit_next_buses()">BACK</button>
-            
+
         </div>
-        
+
         <script type="text/javascript">
-            
+
             function backtomenu_onclick() {
                 window.location.href = "schedule.html";
             }
-            
+
             function nextbuses_onclick() {
                 document.getElementById("nextbuseslist").style.display = "flex";
             }
-            
+
             function exit_next_buses() {
                 document.getElementById("nextbuseslist").style.display = "none";
             }
-            
-            
-        
+
+
+
         </script>
-    
+
     </body>
 
 </html>

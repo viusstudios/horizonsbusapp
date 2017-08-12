@@ -146,7 +146,7 @@ details:hover {
     margin-bottom: 2%;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    text-align: center;
+    text-align: left;
     font-size: 18pt;
     color: rgb(22,187,129);
     background: rgba(255,255,255,1);
@@ -171,6 +171,7 @@ details:hover {
         -webkit-appearance: none;
         border-radius: 0;
         width: 98%;
+        text-align: left;
     }
 
 .container form input[type=text]:focus {

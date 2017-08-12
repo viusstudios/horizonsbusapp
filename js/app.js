@@ -1,6 +1,4 @@
-// DOMS
-
-var routeSelectionDOM = document.getElementById("routelist");
+var routeSelectionDOM = document.getElementById("routelist"); // for HTML to interact with DOM
 
 // GET ROUTE FUNCTION
 
@@ -49,7 +47,7 @@ function loadTimes(val) {
     else {
         originIndex = originList.selectedIndex;
         originValue = originList.value;
-        destinationIndex = destinationList.selectedIndex + 1; // add one, because one array element is spliced out due to invalidity (see lines 27 and 29)
+        destinationIndex = destinationList.selectedIndex + 1; // add one, because one array element is spliced out due to invalidity (see lines 23 and 25)
         destinationValue = destinationList.value;
 
         date = new Date();
@@ -57,14 +55,13 @@ function loadTimes(val) {
         minutes = date.getMinutes();
         dateConverted = hours + "." + minutes; // converts date into hh.mm form, to compare with integer values in array
 
-        day = date.getDay();
-
         selectedBus = eval(userValue).busTimesMonFri;
 
-        // THE BELOW HAS BEEN COMMENTED OUT, BECAUSE SOME BUS OBJECTS DO NOT HAVE DATA FOR BUS TIMES FRIDAY, SATURDAY AND SUNDAY. HOWEVER, THE CODE HAS BEEN TESTED, AND WILL WORK IF DATA FOR FRIDAY, SATURDAY AND SUNDAY IS PROVIDED.
+        // THE BELOW HAS BEEN COMMENTED OUT, BECAUSE SOME BUS OBJECTS DO NOT HAVE DATA FOR BUS TIMES FRIDAY, SATURDAY AND SUNDAY. HOWEVER, THE CODE HAS BEEN TESTED, AND WILL WORK IF DATA FOR FRIDAY, SATURDAY AND SUNDAY IS PROVIDED (see bus-stops-and-times-final.js).
 
+        /* day = date.getDay();
 
-        /* if (day === 5) {
+        if (day === 5) {
             selectedBus = eval(userValue).busTimesFriOnly;
         }
 
@@ -103,9 +100,9 @@ function loadTimes(val) {
                 // adds one more integer to originIndex and destinationIndex, to locate the next available bus from array
 
                 document.getElementById("nextbusvalue").innerHTML = selectedTime.toFixed(2);
-                document.getElementById("arrivaltimevalue").innerHTML = destinationTime.toFixed(2);
+                document.getElementById("arrivaltimevalue").innerHTML = destinationTime.toFixed(2); // prints time as HH.MM, as a string rather than an integer.
 
-                document.getElementById("timeoverlay").style.display = "block";
+                document.getElementById("timeoverlay").style.display = "block"; // triggers overlay
 
                 break;
             }
@@ -121,15 +118,18 @@ function loadTimes(val) {
 
 // function to display all times for origin and destination stops
 
+var timeOverlay = document.getElementById("timeoverlay");
+var allTimes = document.getElementById("alltimes");
+
 function viewAllTimes() {
 
-    document.getElementById("timeoverlay").style.display = "none";
-    document.getElementById("alltimes").style.display = "block";
+    timeOverlay.style.display = "none";
+    allTimes.style.display = "block";
 
     timeContentOrigin = "<h4 id='originHeading'>" + originValue + "</h4>";
-    timeContentDestination = "<h4 id='originHeading'>" + destinationValue + "</h4>";
+    timeContentDestination = "<h4 id='originHeading'>" + destinationValue + "</h4>"; //this changes titles of time lists according to origin and destination options in originList & destinationList
 
-    // loop compiles list of times
+    // loop compiles list of times underneath each heading
 
     for(var x = 0; x < selectedBus.length; x++) {
         timeContentOrigin += '<li>' + selectedBus[x][originIndex].toFixed(2) + '</li>';
@@ -146,12 +146,18 @@ function viewAllTimes() {
 // function to exit overlay with next bus info
 
 function exitOverlay() {
-    document.getElementById("timeoverlay").style.display = "none";
+    timeOverlay.style.display = "none";
 }
 
 // function to exit overlay with all times info
 
 function exitTimeList() {
-    document.getElementById("alltimes").style.display = "none";
-    document.getElementById("timeoverlay").style.display = "block";
+    allTimes.style.display = "none";
+    timeOverlay.style.display = "block";
+}
+
+// function to exit new routes page completely
+
+function backtomenu_onclick() {
+    window.location.href = "index.html";
 }
